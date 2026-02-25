@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script"; // 🌟 바로 이 녀석이 빠져있었습니다!
 import "./globals.css";
 
 const geistSans = Geist({
@@ -15,7 +16,6 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Iron Speed Calc",
   description: "Estimate your clubhead speed instantly.",
-  // 🌟 구글 서치 콘솔 소유권 인증 코드 추가
   verification: {
     google: "R31CCusp43HzLDTuTSiA9NnWNWi4KI2wGd4fKTEnF6I",
   },
@@ -28,10 +28,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
+        
+        {/* 🌟 구글 애널리틱스 스크립트 추가 */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-L21PHXS1SB"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-L21PHXS1SB');
+          `}
+        </Script>
       </body>
     </html>
   );
