@@ -121,7 +121,7 @@ export default function SwingSpeedCalculator() {
         )}
       </div>
 
-      {/* 🌟 수정된 트로이 목마 링크: 호기심 자극 텍스트 + 은은한 애니메이션 */}
+      {/*  */}
       <div className="mt-12 text-center pb-8">
         <p className="text-xs text-stone-400 mb-3 font-medium italic">
           "Wait, is it your swing or the weather today?"
@@ -132,7 +132,7 @@ export default function SwingSpeedCalculator() {
           rel="noopener noreferrer"
           className="inline-flex flex-col items-center group"
         >
-          {/* 아이콘을 둥근 버튼처럼 감싸서 '누를 수 있는 것'임을 암시 */}
+          {/*  */}
           <div className="bg-white p-3 rounded-full shadow-sm border border-stone-200 group-hover:border-stone-800 group-hover:shadow-md transition-all duration-300 transform group-hover:-translate-y-1">
             <Image 
               src="/image_6.png" 
@@ -142,7 +142,7 @@ export default function SwingSpeedCalculator() {
               className="opacity-80 group-hover:opacity-100 transition-opacity"
             />
           </div>
-          {/* 하단에 아주 작고 세련된 설명 텍스트 */}
+          {/*  */}
           <span className="mt-2 text-[10px] font-bold text-stone-400 group-hover:text-stone-800 transition-colors uppercase tracking-widest">
             Check Yardage Loss
           </span>
